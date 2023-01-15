@@ -56,7 +56,14 @@ export const ContactForm = ({ addUser }) => {
             onChange={handleChange}
           />
         </label>
-        <Button type="submit">Add Contact</Button>{' '}
+        <Button
+          mt="md"
+          type="submit"
+          variant="gradient"
+          gradient={{ from: 'teal', to: 'blue', deg: 60 }}
+        >
+          Add Contact
+        </Button>
       </form>
     </>
   );

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Button } from '@mantine/core';
+import { Box, Button, Container } from '@mantine/core';
 import { useSelector } from 'react-redux';
 
 export const ContactList = ({ deleteUser }) => {
@@ -18,8 +18,30 @@ export const ContactList = ({ deleteUser }) => {
           )
           .map(contact => (
             <li key={contact.id}>
-              {contact.name}: {contact.number}
-              <Button onClick={() => deleteUser(contact.id)}>Delete</Button>
+              <Box
+                sx={theme => ({
+                  backgroundColor:
+                    theme.colorScheme === 'dark'
+                      ? theme.colors.dark[6]
+                      : theme.colors.gray[0],
+                  textAlign: 'center',
+                  padding: theme.spacing.xl,
+                  borderRadius: theme.radius.md,
+                  cursor: 'pointer',
+
+                  '&:hover': {
+                    backgroundColor:
+                      theme.colorScheme === 'dark'
+                        ? theme.colors.dark[5]
+                        : theme.colors.gray[1],
+                  },
+                })}
+              >
+                <div>
+                  {contact.name}: {contact.number}
+                </div>
+                <Button onClick={() => deleteUser(contact.id)}>Delete</Button>
+              </Box>
             </li>
           ))}
       </ul>

@@ -5,6 +5,7 @@ import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
 import { addContact, removeContact } from 'redux/contacts/contactsSlice';
 import { setFilter } from 'redux/filter/filterSlice';
+import { SimpleGrid } from '@mantine/core';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -27,11 +28,13 @@ export const App = () => {
 
   return (
     <>
-      <h1>Phonebook</h1>
-      <ContactForm addUser={addUser} />
-      <h2>Contacts</h2>
-      <Filter setFilterValue={setFilterValue} />
-      <ContactList deleteUser={deleteUser} />
+      <SimpleGrid cols={1} spacing="xl">
+        <h1>Phonebook</h1>
+        <ContactForm addUser={addUser} />
+        <h2>Contacts</h2>
+        <Filter setFilterValue={setFilterValue} />
+        <ContactList deleteUser={deleteUser} />
+      </SimpleGrid>
     </>
   );
 };
