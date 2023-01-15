@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-04-phonebook",
+  "name": "goit-react-hw-06-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://smerch88.github.io/goit-react-hw-04-phonebook/",
+  "homepage": "https://smerch88.github.io/goit-react-hw-06-phonebook/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@mantine/core": "^5.9.5",
