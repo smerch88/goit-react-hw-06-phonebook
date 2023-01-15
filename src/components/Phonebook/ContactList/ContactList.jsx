@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Box, Button, Container } from '@mantine/core';
+import { Box, Button } from '@mantine/core';
 import { useSelector } from 'react-redux';
 
 export const ContactList = ({ deleteUser }) => {
