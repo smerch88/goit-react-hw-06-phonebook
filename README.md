@@ -28,14 +28,6 @@
   <li><a href="https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api?apiVersion=2022-11-28">GitHUB Api</a> - Api used</li>
 </ul>
 
-<!-- <h2>Contributing</h2>
-
-<p>Please read <a href="link">CONTRIBUTING.md</a> for details on our code of conduct and the process for submitting pull requests.</p>
-
-<h2>Versioning</h2>
-
-<p>We use <a href="link">SemVer</a> for versioning. For the available versions, see the <a href="link">tags on this repository</a>.</p> -->
-
 <h2>Authors</h2>
 
 <ul>
