@@ -1,6 +1,6 @@
 # goit-react-hw-06-phonebook
 
-<h1>Phone book Stats</h1>
+<h1>Phone book</h1>
 
 <p>Phone book working on Redux as part of educational process.</p>
 
