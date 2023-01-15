@@ -23,6 +23,7 @@
 
 <ul>
   <li><a href="https://reactjs.org/e">React</a> - The web framework used</li>
+  <li><a href="https://redux.js.org/">Redux</a> - A Predictable State Container for JS Apps</li>
   <li><a href="https://mantine.dev/">Mantine</a> - The library used</li>
   <li><a href="https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api?apiVersion=2022-11-28">GitHUB Api</a> - Api used</li>
 </ul>
