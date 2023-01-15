@@ -1,17 +1,23 @@
 import PropTypes from 'prop-types';
 import { Button } from '@mantine/core';
+import { useSelector } from 'react-redux';
 
-export const ContactList = ({ contacts, filter, deleteUser }) => {
+export const ContactList = ({ deleteUser }) => {
+  const contacts = useSelector(state => state.contacts.contacts);
+  const filterValue = useSelector(state => state.filter.filter);
+
   return (
     <>
       <ul>
         {contacts
           .filter(contact =>
-            contact.name.toLowerCase().includes(filter.toLowerCase())
+            contact.name
+              .trim()
+              .toLowerCase()
+              .includes(filterValue.trim().toLowerCase())
           )
           .map(contact => (
             <li key={contact.id}>
-              {' '}
               {contact.name}: {contact.number}
               <Button onClick={() => deleteUser(contact.id)}>Delete</Button>
             </li>
