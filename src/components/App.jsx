@@ -2,13 +2,14 @@ import { ContactForm } from './Phonebook/ContactForm';
 import { ContactList } from './Phonebook/ContactList/ContactList';
 import { Filter } from './Phonebook/Filter/Filter';
 import { nanoid } from 'nanoid';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContact, removeContact } from 'redux/contacts/contactsSlice';
 import { setFilter } from 'redux/filter/filterSlice';
 import { SimpleGrid } from '@mantine/core';
 
 export const App = () => {
   const dispatch = useDispatch();
+  const contacts = useSelector(state => state.contacts.contacts);
 
   const deleteUser = userId => {
     dispatch(removeContact(userId));
@@ -19,7 +20,11 @@ export const App = () => {
       ...data,
       id: nanoid(),
     };
-    dispatch(addContact(newContact));
+    if (contacts.filter(contact => contact.name === data.name).length) {
+      alert(data.name + ' is already in contacts!');
+    } else {
+      dispatch(addContact(newContact));
+    }
   };
 
   const setFilterValue = data => {
